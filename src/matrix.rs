@@ -57,7 +57,7 @@ impl Matrix {
 }
 
 
-fn determinante_laplace(m: &Matrix) -> f64 {
+pub fn determinante_laplace(m: &Matrix) -> f64 {
     if m.get_cols() == 2 && m.get_rows() == 2 {
        return m.get_value(0, 0) * m.get_value(1, 1) - m.get_value(0,1) * m.get_value(1, 0);
     }
